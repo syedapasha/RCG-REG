@@ -1,0 +1,25 @@
+function [err, theta_grad, grad_t] = registration_error(R, t, X1_c, Z)
+% Registration error and gradients for SE(2)
+
+% Inputs:
+%   R     : 2x2 rotation
+%   t     : 2x1 translation (absolute, not centered)
+%   X1_c  : Nx2 source points centered at their centroid (X1 - mean(X1))
+%   Z     : Nx2 matched target points in absolute coordinates
+%
+% Error is computed on absolute coordinates:
+%   e_i = R*xi + t - zi
+% Gradients:
+%   grad_t      = (2/N) * sum_i e_i
+%   theta_grad  = (2/N) * sum_i e_i^T (R * (J*xi)),  J = [0 -1; 1 0]
+
+
+%  Note: J * [u v]' = [-v u]' 
+
+diff = R*X1_c' + t - Z';    diff = diff';
+err = sqrt(mean(sum(diff.^2,2)));
+
+theta_grad = 2 * mean(sum(diff .* (R*[-X1_c(:,2) X1_c(:,1)]')',2));
+grad_t  = 2 * mean(diff,1)';
+
+end

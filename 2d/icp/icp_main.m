@@ -1,9 +1,7 @@
 clear all; close all;
 
 % shape = "lizard";
-% shape = "dog";
-% shape = "butterfly";
-shape = "bird";
+shape = "dog";
 
 
 %% Load source and target shapes
@@ -48,12 +46,6 @@ if shape == "lizard"
 elseif shape == "dog"
     dog_ER_icp = ER;
     save('dog_er_icp.mat', "dog_ER_icp");
-elseif shape == "butterfly"
-    butterfly_ER_icp = ER;
-    save('butterfly_er_icp.mat', "butterfly_ER_icp");
-elseif shape == "bird"
-    bird_ER_icp = ER;
-    save('bird_er_icp.mat', "bird_ER_icp");
 end    
 
 

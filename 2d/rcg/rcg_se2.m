@@ -1,9 +1,7 @@
 clear all; close all;
 
-shape = "lizard";
-% shape = "dog";
-% shape = "butterfly";
-% shape = "bird";
+% shape = "lizard";
+shape = "dog";
 
 %% Load source and target shapes
 %*******************************
@@ -45,12 +43,6 @@ if shape == "lizard"
 elseif shape == "dog"
     dog_ER_rcg = ER;
     save('dog_er_rcg.mat', "dog_ER_rcg");
-elseif shape == "butterfly"
-    butterfly_ER_rcg = ER;
-    save('butterfly_er_rcg.mat', "butterfly_ER_rcg");
-elseif shape == "bird"
-    bird_ER_rcg = ER;
-    save('bird_er_rcg.mat', "bird_ER_rcg");
 end    
 
 

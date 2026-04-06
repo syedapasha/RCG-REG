@@ -68,10 +68,7 @@ X2 = X2(:,idx2);
     'eta', 0.5, ...            
     'tol', 1e-5);             
 
-if shape == "cattle"
-    cattle_ER_rsda = ER;
-    save('cattle_ER_rsda.mat', "cattle_ER_rsda");
-elseif shape == "lizard"
+if shape == "lizard"
     lizard_ER_rsda = ER;
     save('lizard_ER_rsda.mat', "lizard_ER_rsda");
 elseif shape == "dog"

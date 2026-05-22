@@ -1,6 +1,6 @@
 <p align="center">
   <h1>RCG-REG</h1>
-  <p align="center">Elevate your image registration accuracy and efficiency with advanced Riemannian optimization.</p>
+  <p align="center">Image registration accuracy and efficiency with advanced Riemannian optimization.</p>
   <p align="center">
     <img alt="Build Status" src="https://img.shields.io/badge/Build-Passing-brightgreen">
     <img alt="License" src="https://img.shields.io/badge/License-MIT-blue">
@@ -21,12 +21,11 @@ RCG-REG leverages the power of Riemannian nonmonotone conjugate gradient algorit
 
 ## Key Features
 
-*   🚀 **Enhanced Accuracy**: Achieve superior registration precision by utilizing advanced Riemannian optimization principles.
+*   🚀 **Enhanced Accuracy**: Achieve superior registration precision by utilizing optimization on Riemannian manifolds.
 *   ⚡ **Optimized Performance**: Experience faster convergence rates and reduced computational overhead compared to traditional methods.
 *   ✨ **Robust 2D & 3D Support**: Seamlessly register both two-dimensional and three-dimensional images with a unified, powerful framework.
 *   ⚙️ **Nonmonotone Strategy**: Benefit from a more forgiving optimization approach that can escape local minima more effectively, improving global convergence.
 *   🌐 **Geometric Awareness**: Exploit the intrinsic structure of image transformation spaces, leading to more natural and accurate deformations.
-*   🛠️ **MATLAB Integration**: Leverage a familiar and powerful environment for scientific computing, simplifying integration into existing workflows.
 
 ---
 
@@ -84,38 +83,3 @@ To get RCG-REG up and running, follow these steps:
 
 ---
 
-## Community & Governance
-
-### Contributing
-
-We welcome contributions to RCG-REG! Whether it's a bug fix, a new feature, or an improvement to the documentation, your input is valuable. To contribute:
-
-1.  **Fork** the repository to your GitHub account.
-2.  **Clone** your forked repository to your local machine:
-    `git clone https://github.com/your-username/RCG-REG.git`
-3.  **Create a new branch** for your feature or bug fix:
-    `git checkout -b feature/your-feature-name` or `bugfix/your-bug-fix-name`
-4.  **Implement** your changes, ensuring they adhere to the project's coding standards and style.
-5.  **Test** your changes thoroughly to prevent regressions.
-6.  **Commit** your changes with a clear, concise, and descriptive message:
-    `git commit -m "feat: Add new feature X" ` or `fix: Resolve bug Y"`
-7.  **Push** your branch to your forked repository:
-    `git push origin feature/your-feature-name`
-8.  **Open a Pull Request** against the `main` branch of this repository, providing a detailed description of your changes and their benefits.
-
-### License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for full details.
-
-**Summary of Permissions:**
-*   ✅ Commercial Use
-*   ✅ Modification
-*   ✅ Distribution
-*   ✅ Private Use
-
-**Summary of Conditions:**
-*   ℹ️ License and copyright notice must be included with the software.
-
-**Summary of Limitations:**
-*   🚫 Liability
-*   🚫 Warranty

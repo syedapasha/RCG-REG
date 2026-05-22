@@ -50,13 +50,12 @@ end
 
 
 
-
 %% construct plots
 %*****************
 
 % plot source and target
 f = figure('visible', 'off');
-plot(src_pts3(1,:), src_pts3(2,:), tgt_pts3(1,:), tgt_pts3(2,:), 'LineStyle','none', 'Marker','.', 'MarkerSize',2);
+plot(src_pts3(1,:), src_pts3(2,:), tgt_pts3(1,:), tgt_pts3(2,:), '-.', 'MarkerSize',2);
 ax = gca; ax.FontSize = 10; ax.PlotBoxAspectRatio = [1 1 1];
 title(strcat(shape," Test Set"), 'FontSize',15);
 % legend('source', 'target', 'FontSize',10, 'Location','southwest');
@@ -66,7 +65,7 @@ exportgraphics(f, strcat(shape, '_data.png'));
 
 % plot registered shape
 f = figure('visible', 'off');
-plot(tgt_pts3(1,:), tgt_pts3(2,:), src_icp(1,:), src_icp(2,:),  'LineStyle','none',  'Marker','.', 'MarkerSize',2);
+plot(tgt_pts3(1,:), tgt_pts3(2,:), src_icp(1,:), src_icp(2,:), '-.', 'MarkerSize',2);
 ax = gca; ax.FontSize = 10; ax.PlotBoxAspectRatio = [1 1 1];
 title('ICP', 'FontSize',15);
 % legend('target', 'registered', 'FontSize',10, 'Location','southwest');

@@ -119,54 +119,12 @@ end
 
 % plot registered shape
 f = figure('visible', 'off');
-plot(X2(:,1), X2(:,2), Xreg(:,1), Xreg(:,2), 'LineStyle','none',  'Marker','.', 'MarkerSize',2);
+plot(X2(:,1), X2(:,2), Xreg(:,1), Xreg(:,2), '-.', 'MarkerSize',2);
 ax = gca; ax.FontSize = 10; ax.PlotBoxAspectRatio = [1 1 1];
 title('EHL-ICP', 'FontSize',15);
 legend('target', 'registered', 'FontSize',10, 'Location','southwest');
 grid on;
 exportgraphics(f, strcat(shape, '_ehl_icp.png'));
-
-
-
-% %% --- Visualization with Fixed Axis ---
-% all_pts = [X1_used; X2; Xreg];
-% min_x = min(all_pts(:,1));
-% max_x = max(all_pts(:,1));
-% min_y = min(all_pts(:,2));
-% max_y = max(all_pts(:,2));
-% buffer_x = 0.05 * (max_x - min_x + eps);
-% buffer_y = 0.05 * (max_y - min_y + eps);
-% x_limits = [min_x-buffer_x, max_x+buffer_x];
-% y_limits = [min_y-buffer_y, max_y+buffer_y];
-
-% figure('Name','EHL-ICP (Hamiltonian, As Paper, Auto-Flip, Fast Converge)','NumberTitle','off');
-% subplot(2,3,1);
-% plot(X1_used(:,1), X1_used(:,2), 'r--', 'LineWidth', 1.5);
-% title('Source Shape (Used)'); axis equal; grid on;
-% xlim(x_limits); ylim(y_limits);
-% 
-% subplot(2,3,2);
-% plot(X2(:,1), X2(:,2), 'g-', 'LineWidth', 2);
-% title('Target Shape'); axis equal; grid on;
-% xlim(x_limits); ylim(y_limits);
-% 
-% subplot(2,3,3);
-% plot(X2(:,1), X2(:,2), 'g-', 'LineWidth', 2); hold on;
-% plot(X1_used(:,1), X1_used(:,2), 'r--', 'LineWidth', 1.5);
-% plot(Xreg(:,1), Xreg(:,2), 'b-.', 'LineWidth', 2);
-% title('EHL-ICP Hamiltonian Alignment'); axis equal; grid on;
-% legend('Target','Source','Registered');
-% xlim(x_limits); ylim(y_limits);
-% 
-% subplot(2,3,[4 5]);
-% plot(1:k, ER, 'k--o', 'LineWidth', 1.5);
-% xlabel('Iteration'); ylabel('RMS Error');
-% title('Convergence Plot'); grid on;
-% 
-% subplot(2,3,6);
-% bar(k, 'FaceColor', [0.3 0.6 0.8]);
-% title('Iterations Used'); ylabel('Count'); grid on;
-% set(gca,'XTickLabel',{'EHL-ICP-H'});
 
 
 %% --- Console Output ---

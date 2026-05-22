@@ -13,7 +13,7 @@ T = load(tgtFile); X2 = T.contour;  % target
 
 
 
-opts.max_iter = 40;
+opts.max_iter = 60;
 opts.retraction_type = 'identity';
 opts.xtol = 1e-5;
 opts.gtol = 1e-5;
@@ -53,7 +53,7 @@ end
 % plot registered shape
 %----------------------
 f = figure('visible', 'off');
-plot(X2(:,1), X2(:,2), Xreg(:,1), Xreg(:,2), 'LineStyle','none', 'Marker','.', 'MarkerSize',2);
+plot(X2(:,1), X2(:,2), Xreg(:,1), Xreg(:,2), '-.', 'MarkerSize',2);
 ax = gca; ax.FontSize = 10; ax.PlotBoxAspectRatio = [1 1 1];
 title('Proposed RCG', 'FontSize',15);
 % legend('target', 'registered', 'FontSize',10, 'Location','southwest');

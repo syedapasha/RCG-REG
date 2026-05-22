@@ -1,9 +1,7 @@
 clear all; close all; 
 
-shape = "lizard";
-% shape = "dog";
-% shape = "butterfly";
-% shape = "bird";
+% shape = "lizard";
+shape = "dog";
 
 %% Load source and target shapes
 %*******************************
@@ -81,7 +79,7 @@ end
 %% plot registered shape
 %-----------------------
 f = figure('visible', 'off');
-plot(X2(1,:), X2(2,:), Xreg(1,:), Xreg(2,:), 'LineStyle','none',  'Marker','.', 'MarkerSize',2);
+plot(X2(1,:), X2(2,:), Xreg(1,:), Xreg(2,:), '-.', 'MarkerSize',2);
 % xlim([-1,1]); ylim([-1,1]); 
 ax = gca; ax.FontSize = 10; ax.PlotBoxAspectRatio = [1 1 1];
 title('RSDA', 'FontSize',15);
@@ -89,30 +87,6 @@ legend('target', 'registered', 'FontSize',10, 'Location','southwest');
 grid on;
 exportgraphics(f, strcat(shape, '_rsda.png'));
 
-
-% figure('Name','Riemannian SD ICP-2D Registration','NumberTitle','off');
-% subplot(2,2,1);
-% scatter(X1(1,:), X1(2,:), 8, 'r', 'filled');
-% title('Source Shape'); axis equal; grid on;
-% 
-% subplot(2,2,2);
-% scatter(X2(1,:), X2(2,:), 8, 'g', 'filled');
-% title('Target Shape'); axis equal; grid on;
-% 
-% subplot(2,2,3);
-% hold on;
-% scatter(X1(1,:), X1(2,:), 8, 'r', 'filled');         
-% scatter(X2(1,:), X2(2,:), 8, 'g', 'filled');        
-% scatter(Xreg(1,:), Xreg(2,:), 8, 'b', 'filled');    
-% title('Source, Target, Registered Shape');
-% axis equal; grid on; 
-% legend('Source','Target','Registered');
-% hold off;
-% 
-% subplot(2,2,4);
-% plot(0:n_iter, errors, 'k--o', 'LineWidth', 1.5);
-% xlabel('Iteration'); ylabel('RMS Error');
-% title('Convergence'); grid on;
 
 
 fprintf('\n--- Riemannian Steepest Descent ICP 2D Registration ---\n');

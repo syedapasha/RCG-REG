@@ -1,6 +1,6 @@
 <p align="center">
   <h1>RCG-REG</h1>
-  <p align="center">Image registration accuracy and efficiency with advanced Riemannian optimization.</p>
+  <p align="center">Image registration accuracy and efficiency with Riemannian optimization.</p>
   <p align="center">
     <img alt="Build Status" src="https://img.shields.io/badge/Build-Passing-brightgreen">
     <img alt="License" src="https://img.shields.io/badge/License-MIT-blue">
@@ -11,33 +11,31 @@
 
 ---
 
-## The Strategic "Why"
+> Traditional image registration methods often struggle with robustly aligning images, leading to suboptimal accuracy, slow convergence, and sensitivity to initial conditions. This can severely impact applications in medical imaging, computer vision, and scientific analysis, where precise alignment is paramount.
 
-> Traditional image registration methods often struggle with robustly aligning images under complex deformations, leading to suboptimal accuracy, slow convergence, and sensitivity to initial conditions. This can severely impact applications in medical imaging, computer vision, and scientific analysis, where precise alignment is paramount.
-
-RCG-REG leverages the power of Riemannian nonmonotone conjugate gradient algorithms to provide a significantly more robust, accurate, and efficient solution for 2D and 3D image registration. By operating on the intrinsic geometry of the problem space, it overcomes the limitations of Euclidean methods, delivering superior alignment performance for even the most challenging datasets.
+RCG-REG leverages the power of optimization on Riemannian manifolds to provide a significantly more robust, accurate, and efficient solution for 2D and 3D image registration. By operating on the intrinsic geometry of the problem space, it overcomes the limitations of Euclidean methods, delivering superior alignment performance for even the most challenging datasets.
 
 ---
 
-## Key Features
+## Features
 
-*   🚀 **Enhanced Accuracy**: Achieve superior registration precision by utilizing optimization on Riemannian manifolds.
-*   ⚡ **Optimized Performance**: Experience faster convergence rates and reduced computational overhead compared to traditional methods.
-*   ✨ **Robust 2D & 3D Support**: Seamlessly register both two-dimensional and three-dimensional images with a unified, powerful framework.
-*   ⚙️ **Nonmonotone Strategy**: Benefit from a more forgiving optimization approach that can escape local minima more effectively, improving global convergence.
-*   🌐 **Geometric Awareness**: Exploit the intrinsic structure of image transformation spaces, leading to more natural and accurate deformations.
+*   **Enhanced Accuracy.** Achieve superior registration precision by utilizing optimization on Riemannian manifolds.
+*   **Optimized Performance.** Faster convergence rates and reduced computational overhead compared to traditional methods.
+*   **Robust 2D & 3D Support.** Seamlessly register both two-dimensional and three-dimensional images with a unified framework.
+*   **Nonmonotone Strategy.** Benefit from a more flexible optimization approach that can escape local minima more effectively, improving global convergence.
+*   **Geometric Awareness.**: Exploits the intrinsic structure of image transformation spaces.
 
 ---
 
 ## Technical Architecture
 
-RCG-REG is built upon a robust foundation designed for high-performance scientific computing and advanced mathematical optimization.
+RCG-REG is built upon a robust foundation designed for high-performance scientific computing and mathematical optimization.
 
-| Technology                  | Purpose                                                                | Key Benefit                                                                  |
+| Technology                  | Purpose                                                                | Benefit                                                                  |
 | :-------------------------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
 | **MATLAB**                  | Primary Development Language & Runtime                                 | Robust environment for numerical computing, algorithm prototyping, and visualization. |
 | **Riemannian Geometry**     | Mathematical Foundation for Optimization                               | Enables optimization on curved manifolds, enhancing registration accuracy and robustness. |
-| **Conjugate Gradient Methods** | Core Optimization Algorithm                                            | Efficiently finds optimal solutions for large-scale problems with fewer iterations. |
+| **Conjugate Gradient Methods** | Optimization Algorithm                                            | Efficiently finds optimal solutions for large-scale problems with fewer iterations. |
 | **Nonmonotone Strategy**    | Optimization Enhancement for Global Convergence                        | Improves global convergence by allowing temporary increases in the objective function, helping to escape local minima. |
 
 ### Directory Structure
@@ -54,7 +52,7 @@ RCG-REG/
 
 ---
 
-## Operational Setup
+## Setup
 
 ### Prerequisites
 
